@@ -1,102 +1,59 @@
-<header id="mainHeader">
+<header id="mainHeader" style=" border: red; border-width: 1px; border-style: solid;">
     <a href="/" title="home" class="logo">
         <!-- I need this div because IE is an affront to mankind-->
         <div>
             <h1>Explore California</h1>
         </div>
     </a>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #b3b3b3;">
+      <!--Serves as the Menu Expander Button, when screen is collased small enough-->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: #3c6b92;">
+              Tours
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><a href="/tours.htm" title="Our tours">All Tours</a></li>
+                <li class="dropdown-item"><a href="/tours.htm" title="find tours">Tours by Activity</a></li>
+                <li class="dropdown-item"><a href="/tours.htm" title="find tours">Tours by Region</a></li>
+                <li class="dropdown-item"><a href="/tours.htm" title="find tours">Tour Finder</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="mission.htm" title="What we believe" style="color: #3c6b92;">Mission</a>
+          </li>
+          <li class="nav-item dropdown" >
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="resources.htm" title="planning resources" style="color: #3c6b92;">Resources</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="resources/faq.htm" title="Got questions?">Tour FAQs</a></li>
+              <li class="dropdown-item"><a href="resources/additional_resources.htm" title="additional resources">Tour Information</a></li>
+              <li class="dropdown-item"><a href="resources/terms.htm" title="terms and conditions">Site Terms</a></li>
+            </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-sm bg-dark">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Tours</a>
-        </li>
-        <ul class="dropdown-menu" aria-labelledby="navbardrop">
-            <li><a href="/tours.htm" title="Our tours">All Tours</a></li>
-            <li><a href="/tours.htm" title="find tours">Tours by Activity</a></li>
-            <li><a href="/tours.htm" title="find tours">Tours by Region</a></li>
-            <li><a href="/tours.htm" title="find tours">Tour Finder</a></li>
-        </ul>
-        <li class="nav-item"><a class="nav-link" href="#">Mission</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Explorers</a></li>
-      </ul>
-    </nav>
-    <nav id="siteNav">
-        <h1>Where do you want to go?</h1>
-        <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Tours<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-
-              </ul>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="/tours.htm" title="Our tours">Tours <br /><span class="tagline">follow our bliss</span></a>
-                <ul>
-                    <li><a href="/tours.htm" title="Our tours">All Tours</a></li>
-                    <li><a href="/tours.htm" title="find tours">Tours by Activity</a></li>
-                    <li><a href="/tours.htm" title="find tours">Tours by Region</a></li>
-                    <li><a href="/tours.htm" title="find tours">Tour Finder</a></li>
-                </ul>
-            </li>
-            <li><a href="mission.htm" title="What we believe">Mission <br /><span class="tagline">what makes us different?</span></a></li>
-            <li>
-                <a href="resources.htm" title="planning resources">Resources <br /><span class="tagline">plan your trip</span></a>
-                <ul>
-                    <li><a href="resources/faq.htm" title="Got questions?">Tour FAQs</a></li>
-                    <li><a href="resources/additional_resources.htm" title="additional resources">Tour Information</a></li>
-                    <li><a href="resources/terms.htm" title="terms and conditions">Site Terms</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="explorers.htm" title="Our community">Explorers <br /><span class="tagline">join our community</span></a>
-                <ul>
-                    <li><a href="explorers/join.htm" title="join our community">Join the Explorers</a></li>
-                    <!-- FIX THIS
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="explorers.htm" title="Our community" style="color: #3c6b92;">Explorers</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="explorers/join.htm" title="join our community">Join the Explorers</a></li>
+              <li class="dropdown-item">
+                <!-- FIX THIS, such that it uses angular routes
                     <li><a href="@Url.Action("Index","Blog")" title="read our blog!">Read our Blog</a></li>
                     -->
-                    <li><a href="explorers/gallery.htm" title="contributor photos">Tour Photos</a></li>
-                    <li><a href="_video/EC_podcast_full version.mov" title="check out our podcast">Video podcast</a></li>
-                </ul>
-            </li>
-            <li>
+              </li>
+              <li class="dropdown-item"><a href="explorers/gallery.htm" title="contributor photos">Tour Photos</a></li>
+              <li class="dropdown-item"><a href="_video/EC_podcast_full version.mov" title="check out our podcast">Video podcast</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle last" href="contact.htm" title="contact us" data-toggle="dropdown" style="color: #3c6b92;">Contact</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="support.htm" title="need help?">Support</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
               <!-- Finish implementing this in Angular
                 @if (User.Identity.IsAuthenticated)
                 {
@@ -115,5 +72,6 @@
               -->
             </li>
         </ul>
+      </div>
     </nav>
 </header>

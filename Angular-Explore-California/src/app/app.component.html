@@ -1,17 +1,15 @@
-<div class="jumbotron text-center">
-  <h1>My First Bootstrap Page</h1>
-  <p>Resize this responsive page to see the effect!</p>
-</div>
-<div class="container-fluid">
-  <div id="wrapper">
-    <app-page-header></app-page-header>
+<div class="container-fluid" style="padding-left: 40px; padding-right: 40px;">
+    <app-page-header ></app-page-header>
     <section id="actionCall"></section>
-    <div id="contentWrapper">
-      <section id="mainContent">
-      </section>
+    <div class="row" style="height: 500px;">
+      <div class="col-3" style="height: 100%; border: red; border-width: 1px; border-style: solid;"></div>
+      <div class="col-9" style="height: 100%; border: blue; border-width: 1px; border-style: solid; overflow: auto;">
+        <div>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
     </div>
-    <app-page-bottom></app-page-bottom>
-  </div>
+    <app-page-bottom ></app-page-bottom>
 </div>
 
 
