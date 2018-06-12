@@ -1,10 +1,7 @@
 import { Injectable, OnDestroy } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/do';
-// import { ErrorObservable } from 'rxjs/observable';
 
 import { IMonthlySpecial } from '../interfaces/monthly-special';
 import { error } from 'util';
@@ -13,21 +10,17 @@ import { error } from 'util';
   providedIn: 'root'
 })
 export class MonthlySpecialService implements OnDestroy {
-  url = 'urlToUse';
+  // url = '../../assets/data/specials.json';
+  url = 'http://localhost:34555/api/Data/GetMonthlySpecials';
   specials: Observable<IMonthlySpecial[]>;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+  }
 
   // Get Monthly Specials from Server
   getSpecials(): Observable<IMonthlySpecial[]> {
     if (!this.specials) {
-      try {
       this.specials = this.httpClient.get<IMonthlySpecial[]>(this.url);
-      this.specials.subscribe((data) => {console.log('Return Data of Monthly Speicals:' + JSON.stringify(data)); }
-                             , (err) => { this.handleError(err); });
-      } catch (error) {
-        this.handleError(error);
-      }
       return this.specials;
     }
     // tslint:disable-next-line:one-line
@@ -37,7 +30,7 @@ export class MonthlySpecialService implements OnDestroy {
   }
 
   // Logs Errors to the Consoles
-  private handleError(err: any) {
+  private handleError(err: string) {
     console.log('Error Occured: ' + err);
   }
 

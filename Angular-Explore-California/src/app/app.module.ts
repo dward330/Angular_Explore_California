@@ -2,11 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { PageBottomComponent } from './page-bottom/page-bottom.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { MonthlySpecialsComponent } from './monthly-specials/monthly-specials.component';
+
+import { MonthlySpecialService } from './services/monthly-special.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +21,10 @@ import { MonthlySpecialsComponent } from './monthly-specials/monthly-specials.co
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot([{path: '', component: AppComponent}])
+    RouterModule.forRoot([{path: 'home', component: AppComponent}]),
+    CommonModule
   ],
-  providers: [],
+  providers: [MonthlySpecialService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

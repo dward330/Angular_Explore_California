@@ -1,6 +1,7 @@
 export interface IMonthlySpecial {
-  Id: number;
-  Key: string;
-  Type: string;
-  Price: number;
+  id: number;
+  key: string;
+  name: string;
+  type: string;
+  price: number;
 }

@@ -8,8 +8,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-
+      <tr *ngFor="let special of specials">
+        <td>{{special.id}}</td>
+        <td>{{special.key}}</td>
+        <td>{{special.name}}</td>
+        <td>{{special.type}}</td>
+        <td>{{special.price}}</td>
       </tr>
     </tbody>
   </table>
